@@ -39,3 +39,29 @@ body {
   text-align: justify;
   line-height: 2;
 }
+
+.sobre-gamificacao{
+  width: 475px;
+  height: 550px;
+  padding: 40px;
+  background-color: white;
+  border: solid 15px #cf5830;
+  border-radius: 30px;
+  color: black;
+  font-family: "Anta";
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.sobre-gamificacao h2{
+  margin-bottom: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.sobre-gamificacao p {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 2;
+}

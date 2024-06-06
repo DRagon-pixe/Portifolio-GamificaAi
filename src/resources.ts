@@ -2,11 +2,13 @@ import { ImageSource, Loader } from "excalibur";
 import sword from "./images/sword.png";
 import logo from "./images/logo.png"
 import GamificaLogo from "./images/logo-vertical.png"
+import gamificacao from "./images/oqGamificacao.png"
 
 export const Resources = {
   Sword: new ImageSource(sword),
   Logo: new ImageSource(logo),
-  Gamifica: new ImageSource(GamificaLogo)
+  Gamifica: new ImageSource(GamificaLogo),
+  Gamificacao: new ImageSource(gamificacao)
 } as const;
 
 export const loader = new Loader();

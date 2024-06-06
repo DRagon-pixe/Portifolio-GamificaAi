@@ -1,9 +1,27 @@
-import { Actor, Color, Engine, FadeInOut, Keys, Scene, Transition, vec } from "excalibur";
+import { Actor, Color, Engine, FadeInOut, Keys, Scene, SceneActivationContext, Transition, vec } from "excalibur";
 import { Resources } from "../resources";
 
 export class historyScene extends Scene {
 // Declaração do elemnetoTexto
 elementoTexto?: HTMLElement
+
+// Método para esmaecer um elemento HTML
+fadeOutElement(elemento: HTMLElement) {
+    // Pegar opacidade do elemento HTML
+    let opacidade = parseFloat(elemento.style.opacity)
+
+    // Repetir diminuição da opacidade
+    setInterval(() => {
+        if (opacidade > 0) {
+            // diminuir a opacidade
+            opacidade -= 0.03
+    
+            // Atualizar a opacidade do elemento
+            elemento.style.opacity = opacidade.toString()
+        }
+    },30)
+
+}
 
 // Ao entrar ou sair da cena, utiliza o feito de transicao lenta
 onTransition(direction: "in" | "out"): Transition | undefined {
@@ -15,6 +33,7 @@ onTransition(direction: "in" | "out"): Transition | undefined {
 }
 
     onInitialize(engine: Engine<any>): void {
+
         this.backgroundColor = Color.fromHex("#403f4c")
 
         // Crair elemento com a descrição da empresa
@@ -31,13 +50,12 @@ onTransition(direction: "in" | "out"): Transition | undefined {
         this.elementoTexto.classList.add("sobre-gamifica")
 
         // Adicionar titulo e paragrafo dentro do conteudo da div
-        this.elementoTexto.innerHTML = `<h2>Sobre o GamificaAi</h2>
-        <p>Nossa empresa cria soluções de envolver estratégias interativas que melhoram a
-          experiência do usuário e impulsionam resultados. Acreditamos no poder dos jogos e da tecnologia para engajar
-          equipes, aumentar a produtividade e motivar, adaptando cada projeto às necessidades específicas do cliente,
-          desde programas de treinamento interativo até sistemas de recompensa e engajamento de funcionários.</p>`
+        this.elementoTexto.innerHTML = `<h2>O que é gamificação?</h2>
+        <p>Gamificação é a aplicação de elementos típicos de jogos em contextos não lúdicos, 
+        com o objetivo de engajar e motivar indivíduos a atingir determinados objetivos. Esta abordagem se utiliza de componentes como pontuação, 
+        níveis, recompensas, desafios, e feedback imediato, visando promover comportamentos desejados e aumentar a participação e o comprometimento dos participantes.</p>`
 
-        let actorLogoVertical = new Actor({
+        let actorLogoVertical = new Actor({  
             pos: vec(engine.drawWidth - 300, engine.halfDrawHeight - 50)
         })
 
@@ -48,10 +66,20 @@ onTransition(direction: "in" | "out"): Transition | undefined {
 
         this.input.keyboard.on("press", (event) => {
             if (event.key == Keys.Enter) {
+                // Criar transicao suave do elemento texto 
+                this.fadeOutElement(this.elementoTexto!)
+
+                // Direcionar para a proxima cena
                 engine.goToScene("gamificacao")
             }
         })
     }
+
+    onDeactivate(context: SceneActivationContext<undefined>): void {
+        // Remover elemento texto da tela
+        this.elementoTexto?.remove()
+    }
+
 }
 
 
