@@ -17,7 +17,7 @@ game.addScene("gamificacao", new gamificationScene())
 game.addScene("exposição", new expoScene())
 
 game.start(loader).then(() => {
-  game.goToScene("exposição", {
+  game.goToScene("gamificacao", {
     sourceOut: new FadeInOut({ duration: 1000})
   })
 })
