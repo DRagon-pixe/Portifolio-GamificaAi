@@ -36,9 +36,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,10333,0,0,0,0,0,0,10333,0,0,0,0,0,0,10333,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,10349,0,0,0,0,0,0,10349,0,0,0,0,0,0,10349,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,10365,0,0,0,0,0,0,10365,0,0,0,0,0,0,10365,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,10617,10618,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,10633,10634,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -52,7 +52,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="13" name="Personagens">
+ <objectgroup id="13" name="Personagens" visible="0">
   <object id="47" name="player_spawn" x="480" y="490">
    <point/>
   </object>
@@ -210,23 +210,23 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="12" name="ObjetosColisores" visible="0">
-  <object id="6" name="mesa_tenis" x="749.818" y="404.545" width="66.1818" height="89.4545"/>
-  <object id="8" name="mesa_stand_0" x="649.909" y="248.636" width="75.9091" height="33.5455"/>
-  <object id="11" name="mesa_stand_1" x="425.892" y="248.373" width="76.0909" height="33.5057"/>
-  <object id="12" name="mesa_stand_2" x="202.17" y="248.511" width="75.9091" height="33.375"/>
+ <objectgroup id="12" name="ObjetosColisores">
+  <object id="6" name="mesa_tenis" x="749.818" y="392.181" width="66.1818" height="101.818"/>
+  <object id="8" name="mesa_stand_0" x="649.909" y="244" width="75.9091" height="38.1819"/>
+  <object id="11" name="mesa_stand_1" x="425.892" y="244.191" width="76.0909" height="37.6875"/>
+  <object id="12" name="mesa_stand_2" x="202.17" y="244.136" width="75.9091" height="37.75"/>
   <object id="13" name="mesinha_1" x="130" y="112.063" width="28" height="35.8125"/>
   <object id="15" name="mesinha_0" x="770.062" y="111.636" width="28.0341" height="36.2955"/>
-  <object id="16" name="mesa_Computador_0" x="586.074" y="247.701" width="43.9432" height="40.6288"/>
-  <object id="19" name="mesa_Computador_1" x="362.074" y="247.568" width="43.9432" height="40.2273"/>
-  <object id="20" name="mesa_Computador_2" x="137.847" y="247.795" width="43.9432" height="39.8978"/>
-  <object id="21" name="sofa_0" x="273.758" y="415.777" width="44.303" height="61.9811"/>
-  <object id="22" name="sofa_1" x="159.917" y="354.042" width="96.375" height="30"/>
+  <object id="16" name="mesa_Computador_0" x="586.074" y="243.792" width="43.9432" height="44.5379"/>
+  <object id="19" name="mesa_Computador_1" x="362.074" y="243.932" width="43.9432" height="43.8637"/>
+  <object id="20" name="mesa_Computador_2" x="137.847" y="243.92" width="43.9432" height="43.7728"/>
+  <object id="21" name="sofa_0" x="273.758" y="414.049" width="44.303" height="63.7094"/>
+  <object id="22" name="sofa_1" x="159.917" y="346.115" width="96.375" height="37.9266"/>
   <object id="23" name="mesa_de_centro" x="183.708" y="421.792" width="48.2917" height="36.375"/>
   <object id="24" name="televisao" x="96" y="352" width="28.0652" height="90.125"/>
-  <object id="25" name="aquario" x="567.667" y="356.182" width="112" height="27.4848"/>
+  <object id="25" name="aquario" x="567.667" y="347.932" width="112" height="35.7348"/>
   <object id="26" name="livros" x="807.938" y="255.85" width="20.0417" height="92.1913"/>
-  <object id="27" name="privada" x="738.212" y="243" width="28.5455" height="30.9394"/>
+  <object id="27" name="privada" x="738.212" y="241.909" width="28.5455" height="32.0303"/>
   <object id="28" name="caixas_0" x="704" y="102" width="29.9167" height="51.3333"/>
   <object id="29" name="vasinho_2" x="625.971" y="117.971" width="24.1449" height="22.0435"/>
   <object id="30" name="vasinho_1" x="741.917" y="125.958" width="20.125" height="20.125"/>
