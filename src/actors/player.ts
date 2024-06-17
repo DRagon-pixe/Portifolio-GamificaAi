@@ -260,6 +260,42 @@ export class Player extends Actor {
                 this.graphics.use(this.ultimaDirecao + "-idle")
             }
         })
+
+        // Configura o player para monitorar o evento "press" -> pressionar
+        engine.input.keyboard.on("press", (event) => {
+            // Se a tecla pressionada for a F e tiver objeto proximo
+            if (event.key == Keys.F && this.temObjetoProximo) {
+                // Identificar o alvo da interação
+                if (this.ultimoColisor?.owner.name == "mesa_stand_0") {
+                    console.log("Essa é a mesa 0")
+                    // Vai para a cena passando qual o objeto da interacao
+                    engine.goToScene("case", {
+                        sceneActivationData:{
+                            // Passa o nome do Actor que interagiu com o Player
+                            nomeDoActor: this.ultimoColisor?.owner.name
+                        }
+                    })
+                }
+                if (this.ultimoColisor?.owner.name == "mesa_stand_1") {
+                    console.log("Essa é a mesa 1")
+                    engine.goToScene("case", {
+                        sceneActivationData:{
+                            // Passa o nome do Actor que interagiu com o Player
+                            nomeDoActor: this.ultimoColisor?.owner.name
+                        }
+                    })
+                }
+                if (this.ultimoColisor?.owner.name == "mesa_stand_2") {
+                    console.log("Essa é a mesa 2")
+                    engine.goToScene("case", {
+                        sceneActivationData:{
+                            // Passa o nome do Actor que interagiu com o Player
+                            nomeDoActor: this.ultimoColisor?.owner.name
+                        }
+                    })
+                }
+            }
+        })
     }
 
     onPreCollisionResolve(self: Collider, other: Collider, side: Side, contact: CollisionContact): void {
@@ -272,7 +308,7 @@ export class Player extends Actor {
 
     onPreUpdate(engine: Engine<any>, delta: number): void {
         // Detectar se oplayer está distante do último objeto colido
-        if (this.ultimoColisor && this.pos.distance(this.ultimoColisor.worldPos) > 80) {
+        if (this.ultimoColisor && this.pos.distance(this.ultimoColisor.worldPos) > 100) {
             // Marcar que o objeto não está próximo
             this.temObjetoProximo = false
 

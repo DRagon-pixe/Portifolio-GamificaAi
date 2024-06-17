@@ -210,7 +210,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="12" name="ObjetosColisores" visible="0">
+ <objectgroup id="12" name="ObjetosColisores">
   <object id="6" name="mesa_tenis" x="749.818" y="389.868" width="66.1818" height="75.9487"/>
   <object id="8" name="mesa_stand_0" x="649.909" y="240.125" width="75.9091" height="29.8069"/>
   <object id="11" name="mesa_stand_1" x="425.892" y="239.918" width="76.0909" height="29.9602"/>

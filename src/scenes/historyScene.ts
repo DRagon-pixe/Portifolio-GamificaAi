@@ -42,7 +42,7 @@ onTransition(direction: "in" | "out"): Transition | undefined {
         // Definir opacidadde do elemneto para 1 = visivel
         this.elementoTexto.style.opacity = "1"
 
-        // Inseriri elementoTexto no container-game
+        // Inserir elementoTexto no container-game
         let containerGame = document.querySelector(".container-game") as HTMLElement
         containerGame.appendChild(this.elementoTexto)
 
