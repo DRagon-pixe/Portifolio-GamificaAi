@@ -1,4 +1,4 @@
-import { Actor, CollisionType, Color, Engine, Keys, SpriteSheet, Vector, vec, Animation, Collider, CollisionContact, Side} from "excalibur";
+import { Actor, CollisionType, Color, Engine, Keys, SpriteSheet, Vector, vec, Animation, Collider, CollisionContact, Side, FadeInOut} from "excalibur";
 import { Resources } from "../resources";
 
 export class Player extends Actor {
@@ -316,4 +316,8 @@ export class Player extends Actor {
         }
     }
     
+}
+
+function onDeactivate(context: any, arg1: any) {
+    throw new Error("Function not implemented.");
 }

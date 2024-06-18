@@ -1,10 +1,11 @@
-import { Color, Engine, FadeInOut, Scene, SceneActivationContext, Transition } from "excalibur";
+import { Color, Engine, FadeInOut, Keys, Scene, SceneActivationContext, Transition } from "excalibur";
 
 export class caseScene extends Scene {
     elementoTexto?: HTMLElement
     private objetoInteracao: any
 
     private textoDACena: string = ""
+    fadeOutElement: any;
 
     onTransition(direction: "in" | "out"): Transition | undefined {
         return new FadeInOut({
@@ -37,16 +38,22 @@ export class caseScene extends Scene {
             containerGame.appendChild(this.elementoTexto)
 
             // Adicionar classe na div criada (elementoTexto)
-            this.elementoTexto.classList.add("sobre-gamifica")
+            this.elementoTexto.classList.add("portifolio-gamifica")
 
             // Adicionar titulo e paragrafo dentro do conteudo da div
             this.elementoTexto.innerHTML = `<h2>Case Número 1</h2>
-            <p></p>`
+            <p>Aqui na GamificaAi, resolvemos os seus problemas com muita cratividade e eficiencia</p>`
+            this.engine.input.keyboard.on("press", (event) => {
+                if (event.key == Keys.Escape) {
+                    this.engine.goToScene("exposição")
+                    this.elementoTexto?.remove()
+                }
+            })
         }
         // Se for a mesa 1
         if (this.objetoInteracao.nomeDoActor == "mesa_stand_1") {
             this.textoDACena = "Essa é a descricao do case B"
-            this.backgroundColor = Color.Yellow
+            this.backgroundColor = Color.Red
             this.elementoTexto = document.createElement("div") as HTMLElement
             // Definir opacidadde do elemneto para 1 = visivel
             this.elementoTexto.style.opacity = "1"
@@ -54,13 +61,21 @@ export class caseScene extends Scene {
             // Inserir elementoTexto no container-game
             let containerGame = document.querySelector(".container-game") as HTMLElement
             containerGame.appendChild(this.elementoTexto)
-
+            
             // Adicionar classe na div criada (elementoTexto)
-            this.elementoTexto.classList.add("sobre-gamifica")
+            this.elementoTexto.classList.add("portifolio-gamifica")
 
             // Adicionar titulo e paragrafo dentro do conteudo da div
             this.elementoTexto.innerHTML = `<h2>Case Número 2</h2>
-            <p></p>`
+            <p>Nos da GamificaAi presamos pelo melhor serviço ao nosso cliente, 
+            atendendo a todas suas necessidades</p>`
+            this.engine.input.keyboard.on("press", (event) => {
+                if (event.key == Keys.Escape) {
+                    this.engine.goToScene("exposição")
+                    this.elementoTexto?.remove()
+                }
+            })
+            
         }
         // Se for a mesa 2
         if (this.objetoInteracao.nomeDoActor == "mesa_stand_2") {
@@ -75,11 +90,17 @@ export class caseScene extends Scene {
             containerGame.appendChild(this.elementoTexto)
 
             // Adicionar classe na div criada (elementoTexto)
-            this.elementoTexto.classList.add("sobre-gamifica")
+            this.elementoTexto.classList.add("portifolio-gamifica")
 
             // Adicionar titulo e paragrafo dentro do conteudo da div
             this.elementoTexto.innerHTML = `<h2>Case Número 3</h2>
-            <p></p>`
+            <p>Nos empenhando cada vez mais para transformar os seus problemas em criativas e divertidas soluções </p>`
+            this.engine.input.keyboard.on("press", (event) => {
+                if (event.key == Keys.Escape) {
+                    this.engine.goToScene("exposição")
+                    this.elementoTexto?.remove()
+                }
+            })
+}
         }
     }
-}

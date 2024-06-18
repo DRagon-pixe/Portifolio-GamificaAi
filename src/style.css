@@ -65,3 +65,28 @@ body {
   text-align: justify;
   line-height: 2;
 }
+
+.portifolio-gamifica{
+  width: 475px;
+  height: 550px;
+  padding: 40px;
+  background-color: white;
+  border: solid 15px #cf5830;
+  border-radius: 30px;
+  color: black;
+  font-family: "Anta";
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.portifolio-gamifica h2 {
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-align: center;
+}
+.portifolio-gamifica p {
+  font-size: 26px;
+  text-align: justify;
+  line-height: 2;
+}
