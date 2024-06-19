@@ -1,0 +1,55 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "C:/Users/49198028898/OneDrive/Desktop/Portifolio - GamificaAi/src/maps/showroom_map.tmx",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
+    "fileStates": {
+        "C:/Users/49198028898/OneDrive/Desktop/Portifolio - GamificaAi/src/maps/showroom_map.tmx": {
+            "expandedObjectLayers": [
+                13
+            ],
+            "scale": 0.75,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": -190.66666666666669,
+                "y": 382
+            }
+        },
+        "C:/Users/49198028898/OneDrive/Desktop/Portifolio - GamificaAi/src/maps/tileset_biblioteca.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/49198028898/OneDrive/Desktop/Portifolio - GamificaAi/src/maps/tileset_estoque.tsx": {
+            "scaleInDock": 1.5
+        },
+        "C:/Users/49198028898/OneDrive/Desktop/Portifolio - GamificaAi/src/maps/tileset_generic.tsx": {
+            "scaleInDock": 0.75
+        },
+        "C:/Users/49198028898/OneDrive/Desktop/Portifolio - GamificaAi/src/maps/tileset_paredes.tsx": {
+            "scaleInDock": 1
+        },
+        "sem título.tmx": {
+            "scale": 3,
+            "selectedLayer": 11,
+            "viewCenter": {
+                "x": 473,
+                "y": 441.8333333333333
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/49198028898/OneDrive/Desktop/Portifolio - GamificaAi/src/maps",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 29,
+    "openFiles": [
+        "C:/Users/49198028898/OneDrive/Desktop/Portifolio - GamificaAi/src/maps/showroom_map.tmx"
+    ],
+    "project": "mapa.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "C:/Users/49198028898/OneDrive/Desktop/Portifolio - GamificaAi/src/maps/showroom_map.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

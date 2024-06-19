@@ -16,19 +16,27 @@ import tsxBibliotecaPath from "./maps/tileset_biblioteca?url"
 import tmxMapaPath from "./maps/showroom_map.tmx?url"
 
 import playerSpritePaht from "./sprites/Player.png"
-import npcSpritePaht from "./sprites/"
+import npcSpritePaht from "./sprites/NPC.png"
 
 import ritmada from "./sounds/ritmada_zelda.mp3"
 import classico from "./sounds/zelda.mp3"
+
+import logo1 from "./images/1.png"
+import logo2 from "./images/2.png"
+import logo3 from "./images/3.png"
 
 export const Resources = {
   Sword: new ImageSource(sword),
   Logo: new ImageSource(logo),
   PlayerSpriteSheet: new ImageSource(playerSpritePaht, { filtering: ImageFiltering.Pixel }),
+  NpcSpriteSheet: new ImageSource(npcSpritePaht, {filtering: ImageFiltering.Pixel}),
   Gamifica: new ImageSource(GamificaLogo),
   Gamificacao: new ImageSource(gamificacao),
   RitmadaBGM: new Sound(ritmada),
 ClassicBGM: new Sound(classico),
+Logo0: new ImageSource(logo1),
+Logo1: new ImageSource(logo2),
+Logo2:new ImageSource(logo3),
   Mapa: new TiledResource(tmxMapaPath, {
     pathMap: [
       { path: "showroom_map.tmx", output: tmxMapaPath },

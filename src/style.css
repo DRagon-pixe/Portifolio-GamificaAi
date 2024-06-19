@@ -66,7 +66,7 @@ body {
   line-height: 2;
 }
 
-.portifolio-gamifica{
+.texto-case{
   width: 475px;
   height: 550px;
   padding: 40px;
@@ -80,12 +80,12 @@ body {
   left: 5%;
 }
 
-.portifolio-gamifica h2 {
+.texto-case h2 {
   margin-bottom: 40px;
   font-size: 40px;
   text-align: center;
 }
-.portifolio-gamifica p {
+.texto-case p {
   font-size: 26px;
   text-align: justify;
   line-height: 2;
