@@ -1,37 +1,98 @@
-import { Actor, CollisionType, Color, Engine, SpriteSheet, Vector, vec } from "excalibur";
+import { Actor, CollisionType, Color, Engine, SpriteSheet, Animation, Vector, vec } from "excalibur";
 import { Resources } from "../resources";
 
 export class Npc extends Actor {
-    constructor(posicao: Vector, cor: Color, nome: string) {
+    constructor(posicao: Vector, nome: string) {
         super({
             pos: posicao,
             width: 32,
             height: 32,
             name: nome,
-            color: cor,
             collisionType: CollisionType.Fixed
         })
     }
 
     onInitialize(engine: Engine<any>): void {
-        const NpcSpriteSheet = SpriteSheet.fromImageSource({
-            image: Resources.NpcSpriteSheet,
+        // Carregar os Sprites
+        const spriteNpcA = SpriteSheet.fromImageSource({
+            image: Resources.NpcASpriteSheet,
             grid: {
                 spriteHeight: 64,
                 spriteWidth: 32,
                 columns: 56,
                 rows: 20
-            },
-            spacing: {
-                originOffset: {
-                    y: 0
-                }
+            }
+        })
+        const spriteNpcB = SpriteSheet.fromImageSource({
+            image: Resources.NpcBSpriteSheet,
+            grid: {
+                spriteHeight: 64,
+                spriteWidth: 32,
+                columns: 56,
+                rows: 20
+            }
+        })
+        const spriteNpcC = SpriteSheet.fromImageSource({
+            image: Resources.NpcCSpriteSheet,
+            grid: {
+                spriteHeight: 64,
+                spriteWidth: 32,
+                columns: 56,
+                rows: 20
             }
         })
 
-        let imagemNpc = NpcSpriteSheet.getSprite(3,0)
-        imagemNpc.scale = vec(1.1, 1.1)
+        // Definir o sprite de acordo com o Npc
+        let spriteDefinido
 
-        this.graphics.add(imagemNpc)
+        if(this.name == "npc_0") {
+            spriteDefinido = spriteNpcA
+        }
+        else if (this.name = "npc_1") {
+            spriteDefinido = spriteNpcB
+        }
+        else if (this.name = "npc_2") {
+            spriteDefinido = spriteNpcC
+        }
+        else {
+            console.log("Nome do NPC não previsto", this.name)
+        }
+
+        // Se tiver um spriteDefinido, Criar animacao
+        if (spriteDefinido) {
+            const downIdle = new Animation({
+                frames: [
+                    { graphic: spriteDefinido.getSprite(18, 1) },
+                    { graphic: spriteDefinido.getSprite(19, 1) },
+                    { graphic: spriteDefinido.getSprite(20, 1) },
+                    { graphic: spriteDefinido.getSprite(21, 1) },
+                    { graphic: spriteDefinido.getSprite(22, 1) }
+                ],
+                frameDuration: 70
+            })
+            this.graphics.add(downIdle)
+        }
+
+
+
+
+
+        // const NpcSpriteSheet = SpriteSheet.fromImageSource({
+        //     image: Resources.NpcSpriteSheet,
+        //     grid: {
+        //         spriteHeight: 64,
+        //         spriteWidth: 32,
+        //         columns: 56,
+        //         rows: 20
+        //     },
+        //     spacing: {
+        //         originOffset: {
+        //             y: 0
+        //         }
+        //     }
+        // })
+        // let imagemNpc = NpcSpriteSheet.getSprite(3,0)
+        // imagemNpc.scale = vec(1.1, 1.1)
+        // this.graphics.add(imagemNpc)
     }
 }

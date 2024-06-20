@@ -16,7 +16,10 @@ import tsxBibliotecaPath from "./maps/tileset_biblioteca?url"
 import tmxMapaPath from "./maps/showroom_map.tmx?url"
 
 import playerSpritePaht from "./sprites/Player.png"
-import npcSpritePaht from "./sprites/NPC.png"
+// import npcSpritePaht from "./sprites/NPC.png"
+import npcASpritePaht from "./sprites/NPC.png"
+import npcBSpritePaht from "./sprites/Walter White.png"
+import npcCSpritePaht from "./sprites/Ash Katchum.png"
 
 import ritmada from "./sounds/ritmada_zelda.mp3"
 import classico from "./sounds/zelda.mp3"
@@ -29,7 +32,9 @@ export const Resources = {
   Sword: new ImageSource(sword),
   Logo: new ImageSource(logo),
   PlayerSpriteSheet: new ImageSource(playerSpritePaht, { filtering: ImageFiltering.Pixel }),
-  NpcSpriteSheet: new ImageSource(npcSpritePaht, {filtering: ImageFiltering.Pixel}),
+  NpcASpriteSheet: new ImageSource(npcASpritePaht, {filtering: ImageFiltering.Pixel}),
+  NpcBSpriteSheet: new ImageSource(npcBSpritePaht, {filtering: ImageFiltering.Pixel}),
+  NpcCSpriteSheet: new ImageSource(npcCSpritePaht, {filtering: ImageFiltering.Pixel}),
   Gamifica: new ImageSource(GamificaLogo),
   Gamificacao: new ImageSource(gamificacao),
   RitmadaBGM: new Sound(ritmada),

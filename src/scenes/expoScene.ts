@@ -32,7 +32,7 @@ export class expoScene extends Scene {
 
         // Adicionar o Mapa
         tiledMap.addToScene(this, {
-            pos: vec(offsetX,offsetY),
+            pos: vec(offsetX, offsetY),
         })
 
         // Definir zoom da camera para aumentar um pouco a visualização
@@ -49,27 +49,24 @@ export class expoScene extends Scene {
 
         // Adicionar o player na cena
         this.add(jogador)
-        
+
         // 
         let npcSpawnPointA = tiledMap.getObjectsByName("npc_0")[0]
         let npcSpawnPointB = tiledMap.getObjectsByName("npc_1")[0]
         let npcSpawnPointC = tiledMap.getObjectsByName("npc_2")[0]
 
         // Configurar NPC's
-        let npcA = new Npc(
+        let npcA =  new Npc(
             vec(npcSpawnPointA.x + offsetX, npcSpawnPointA.y + offsetY),
-            Color.Blue,
-            "NpcA"
+            npcSpawnPointA.tiledObject.name!
         )
         let npcB = new Npc(
             vec(npcSpawnPointB.x + offsetX, npcSpawnPointB.y + offsetY),
-            Color.Chartreuse,
-            "NpcB"
+            npcSpawnPointB.tiledObject.name!
         )
         let npcC = new Npc(
             vec(npcSpawnPointC.x + offsetX, npcSpawnPointC.y + offsetY),
-            Color.Yellow,
-            "NpcC"
+            npcSpawnPointC.tiledObject.name!
         )
 
         this.add(npcA)
